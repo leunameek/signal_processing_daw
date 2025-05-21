@@ -13,7 +13,7 @@ def generate_impulse_response(sample_rate, decay_time=1.0, decay_factor=0.5):
 
 def apply_reverb(audio_data, sample_rate, impulse_response=None, mix=0.3, decay_time=1.0):
     """
-    Apply reverb using convolution
+    Aplica el reverb usando convolucion
     mix: 0 (dry) to 1 (wet)
     """
     if impulse_response is None:
