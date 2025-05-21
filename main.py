@@ -13,7 +13,7 @@ from audio_processor import AudioProcessor
 from effects.filters import apply_filter
 from effects.reverb import apply_reverb
 
-class SimpleDAW(QMainWindow):
+class Dawsito(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("DAWsito - Procesamiento de Señales")
@@ -76,7 +76,6 @@ class SimpleDAW(QMainWindow):
         control_layout.addWidget(self.volume_slider)
         control_layout.addWidget(self.volume_label)
 
-        # Filter Controls
         filters_group = QGroupBox("Filtros del Audio")
         filters_layout = QVBoxLayout()
 
@@ -238,7 +237,7 @@ class SimpleDAW(QMainWindow):
     def reset_audio(self):
         try:
             if self.audio_processor.reset_audio():
-                QMessageBox.information(self, "Success", "Audio reset to original!")
+                QMessageBox.information(self, "Eselente", "Cambios deshechos!")
                 self.update_waveforms()
             else:
                 QMessageBox.warning(self, "Pero que pasa?", "Si no has subido nada, que vas a deshacer?")
@@ -346,6 +345,6 @@ class SimpleDAW(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    daw = SimpleDAW()
+    daw = Dawsito()
     daw.show()
     sys.exit(app.exec_())
