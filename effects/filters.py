@@ -31,6 +31,6 @@ def apply_filter(audio_data, sample_rate, filter_type, cutoff_freq=None,
         filtered = signal.lfilter(b, a, audio_data)
     
     else:
-        raise ValueError("Unknown filter type")
+        raise ValueError("Tipo de filtro falopa")
     
     return filtered
